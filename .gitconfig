@@ -1,0 +1,12 @@
+[user]
+  name = lkorth
+  email = luke@lukekorth.com
+[color]
+  ui = auto
+[alisas]
+  co = checkout
+  online = log --pretty=format:\"%h %ad%x20%s%x20%x28%an%x29\" --date=short
+  pull = pull --rebase
+  staged = diff --cached
+[core]
+  autocrlf = input
