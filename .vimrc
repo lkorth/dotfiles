@@ -10,6 +10,12 @@ set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
+" Removes trailing spaces
+function! TrimWhiteSpace()
+  %s/\s\+$//e
+endfunction
+nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
+
 "" Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
@@ -17,4 +23,9 @@ set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
 "" Display
-set number                      " display line numbers on the left
+set number                      " display line numbers on the lefti
+
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
