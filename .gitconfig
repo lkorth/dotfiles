@@ -10,3 +10,5 @@
   staged = diff --cached
 [core]
   autocrlf = input
+[push]
+	default = simple
