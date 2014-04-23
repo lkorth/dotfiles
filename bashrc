@@ -1,4 +1,4 @@
-alias la='ls -la'
+export EDITOR=vim
 
 function tmux-start {
   tmux -S /tmp/$1 new-session -s $1 -d
