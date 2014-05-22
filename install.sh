@@ -9,5 +9,7 @@ mkdir -p ~/.vim/bundle
 wget -N -O ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 rm -rf ~/.vim/bundle/nerdtree
 rm -rf ~/.vim/bundle/tcomment
+rm -rf ~/.vim/bundle/puppet-syntax-vim
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/tomtom/tcomment_vim.git ~/.vim/bundle/tcomment
+git clone https://github.com/puppetlabs/puppet-syntax-vim.git ~/.vim/bundle/puppet-syntax-vim
