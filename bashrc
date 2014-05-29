@@ -1,6 +1,6 @@
 export EDITOR=vim
 
-alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
+alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove'
 
 function tmux-start {
   tmux -S /tmp/$1 new-session -s $1 -d
