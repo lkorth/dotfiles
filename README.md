@@ -2,4 +2,6 @@
 
 ## Installing
 
-`curl -sS https://raw.github.com/lkorth/dotfiles/master/install.sh | sh`
+```bash
+curl https://raw.github.com/lkorth/dotfiles/master/install.sh | sh
+```
