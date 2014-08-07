@@ -1,5 +1,6 @@
 export EDITOR=vim
 
+alias ll='ls -lha'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove'
 
 function tmux-start {
