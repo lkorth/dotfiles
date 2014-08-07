@@ -1,8 +1,10 @@
+"" Options
 set nocompatible                " choose no compatibility with legacy vi
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
+set spell spelllang=en_us       " enable English spell checking
 set dir=/tmp//                  " set location for tmp files
 
 "" Whitespace
