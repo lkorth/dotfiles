@@ -2,6 +2,7 @@ export EDITOR=vim
 
 alias ll='ls -lha'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove'
+alias logs='goaccess -f /var/log/nginx/access.log'
 
 function tmux-start {
   tmux -S /tmp/$1 new-session -s $1 -d
