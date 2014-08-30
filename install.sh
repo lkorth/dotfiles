@@ -1,15 +1,14 @@
 #!/bin/bash
 
+# get dotfiles
 wget -N -O ~/.tmux.conf https://raw.github.com/lkorth/dotfiles/master/tmux.conf
 wget -N -O ~/.vimrc https://raw.github.com/lkorth/dotfiles/master/vimrc
 wget -N -O ~/.gitconfig https://raw.github.com/lkorth/dotfiles/master/gitconfig
 
-mkdir -p ~/.vim/autoload
-mkdir -p ~/.vim/bundle
-wget -N -O ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
-rm -rf ~/.vim/bundle/nerdtree
-rm -rf ~/.vim/bundle/tcomment
-rm -rf ~/.vim/bundle/puppet-syntax-vim
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-git clone https://github.com/tomtom/tcomment_vim.git ~/.vim/bundle/tcomment
-git clone https://github.com/puppetlabs/puppet-syntax-vim.git ~/.vim/bundle/puppet-syntax-vim
+# setup vim
+rm -rf ~/.vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+cd ~/.vim/bundle/command-t/ruby/command-t
+ruby extconf.rb
+make
