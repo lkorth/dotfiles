@@ -12,6 +12,6 @@
 [core]
   autocrlf = input
 [push]
-	default = current
+  default = current
 [credential]
-	helper = cache
+  helper = cache
