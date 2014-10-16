@@ -12,6 +12,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'wincent/command-t'
+Plugin 'ap/vim-css-color'
 
 call vundle#end()               " All plugins must be added before this line
 filetype plugin indent on       " load file type plugins + indentation
