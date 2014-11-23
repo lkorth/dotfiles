@@ -70,3 +70,12 @@ map <silent> <leader>fr :CommandTFlush<CR>
 
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
+
+" vim-fugitive
+function! GitGrepWord()
+  cgetexpr system("git grep -n '" . expand("<cword>") . "'")
+  cwin
+  echo 'Number of matches: ' . len(getqflist())
+endfunction
+command! -nargs=0 GitGrepWord :call GitGrepWord()
+nnoremap <silent> <Leader>gw :GitGrepWord<CR>
