@@ -21,9 +21,11 @@ filetype plugin indent on       " load file type plugins + indentation
 "" Options
 syntax enable
 set encoding=utf-8
-set showcmd                     " display incomplete commands
-autocmd BufRead,BufNewFile *.md setlocal spell " enable spell checking for markdown files
-set dir=/tmp//                  " set location for tmp files
+set showcmd                                              " display incomplete commands
+autocmd BufRead,BufNewFile *.md setlocal spell           " enable spell checking for markdown files
+autocmd BufRead,BufNewFile *.md setlocal textwidth=100   " set text width to 100 characters for markdown files
+autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell " enable spell checking for commit messages
+set dir=/tmp//                                           " set location for tmp files
 
 "" Whitespace
 set nowrap                      " don't wrap lines
