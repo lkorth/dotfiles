@@ -2,6 +2,7 @@
 
 # get dotfiles
 wget -N -O ~/.tmux.conf https://raw.github.com/lkorth/dotfiles/master/tmux.conf
+wget -N -O ~/.zshrc https://raw.github.com/lkorth/dotfiles/master/zshrc
 wget -N -O ~/.vimrc https://raw.github.com/lkorth/dotfiles/master/vimrc
 wget -N -O ~/.gitconfig https://raw.github.com/lkorth/dotfiles/master/gitconfig
 
@@ -12,3 +13,6 @@ vim +PluginInstall +qall
 cd ~/.vim/bundle/command-t/ruby/command-t
 ruby extconf.rb
 make
+
+# set shell to zsh
+chsh -s $(which zsh)
