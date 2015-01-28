@@ -10,6 +10,7 @@ select-word-style bash
 autoload edit-command-line
 zle -N edit-command-line
 bindkey -v
+bindkey "^R" history-incremental-search-backward
 
 # functions
 timeout() {
