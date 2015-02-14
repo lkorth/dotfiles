@@ -14,6 +14,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'wincent/command-t'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-fugitive'
+Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()               " All plugins must be added before this line
 filetype plugin indent on       " load file type plugins + indentation
@@ -53,6 +54,7 @@ set smartcase                   " ... unless they contain at least one capital l
 
 "" Display
 set number                      " display line numbers on the left
+colorscheme jellybeans
 
 "" Shortcuts
 map <silent> <LocalLeader>nh :nohls<CR>
