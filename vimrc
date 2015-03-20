@@ -27,7 +27,7 @@ set nojoinspaces                                         " don't add an extra sp
 autocmd BufRead,BufNewFile *.md setlocal spell           " enable spell checking for markdown files
 autocmd BufRead,BufNewFile *.md setlocal textwidth=100   " set text width to 100 characters for markdown files
 autocmd BufRead,BufNewFile COMMIT_EDITMSG setlocal spell " enable spell checking for commit messages
-set dir=/tmp//                                           " set location for tmp files
+set dir=$TMPDIR                                          " set location for tmp files
 
 "" Whitespace
 set nowrap                      " don't wrap lines
