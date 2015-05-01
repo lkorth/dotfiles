@@ -106,8 +106,16 @@ tmux-watch() {
 }
 
 setopt prompt_subst
-setopt HIST_IGNORE_DUPS
-export HISTSIZE=200
+
+HISTFILE=$HOME/.zsh_history # location of history file
+SAVEHIST=2048               # large history
+HISTSIZE=2048               # large history
+setopt append_history       # append history for all instances
+setopt hist_ignore_dups     # ignore duplicate entries
+setopt hist_reduce_blanks   # trim blanks
+setopt hist_verify          # show before executing history commands
+setopt inc_append_history   # add commands as they are typed, don't wait until shell exit
+setopt share_history        # share hist between sessions
 
 export LOCALE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
