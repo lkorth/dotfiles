@@ -135,7 +135,8 @@ stty start undef
 alias ll='ls -lha'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove'
 alias attach='tmux-start lkorth'
-alias format-json="python -mjson.tool"
+alias format-json='python -mjson.tool'
+alias bi='bundle install'
 
 ## servers
 alias home="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@home.ofkorth.net"
