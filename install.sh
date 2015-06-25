@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# get dotfiles
-wget -N -O ~/.tmux.conf https://raw.github.com/lkorth/dotfiles/master/tmux.conf
-wget -N -O ~/.zshrc https://raw.github.com/lkorth/dotfiles/master/zshrc
-wget -N -O ~/.vimrc https://raw.github.com/lkorth/dotfiles/master/vimrc
-wget -N -O ~/.gitconfig https://raw.github.com/lkorth/dotfiles/master/gitconfig
+# symlink dotfiles
+ln -s $(pwd)/tmux.conf ~/.tmux.conf
+ln -s $(pwd)/zshrc ~/.zshrc
+ln -s $(pwd)/vimrc ~/.vimrc
+ln -s $(pwd)/gitconfig ~/.gitconfig
 
 # setup vim
 rm -rf ~/.vim
