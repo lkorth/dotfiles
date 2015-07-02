@@ -15,3 +15,5 @@
   default = current
 [credential]
   helper = cache
+[rebase]
+  autosquash = true
