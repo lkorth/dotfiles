@@ -15,6 +15,8 @@ Plugin 'wincent/command-t'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-fugitive'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()               " All plugins must be added before this line
 filetype plugin indent on       " load file type plugins + indentation
@@ -89,3 +91,6 @@ function! GitGrepWord()
 endfunction
 command! -nargs=0 GitGrepWord :call GitGrepWord()
 nnoremap <silent> <Leader>gw :GitGrepWord<CR>
+
+" vim-markdown
+let g:vim_markdown_folding_disabled=1
