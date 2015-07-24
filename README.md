@@ -2,6 +2,5 @@
 
 ## Installing
 
-```bash
-curl https://raw.github.com/lkorth/dotfiles/master/install.sh | sh
-```
+Clone `https://github.com/lkorth/dotfiles.git`
+Run `./install.sh`
