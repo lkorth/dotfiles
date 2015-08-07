@@ -17,6 +17,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'elzr/vim-json'
 
 call vundle#end()               " All plugins must be added before this line
 filetype plugin indent on       " load file type plugins + indentation
