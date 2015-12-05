@@ -88,13 +88,13 @@ simple_git_prompt_info() {
 }
 
 tmux-start() {
-  tmux -S $TMPDIR$1 new-session -s $1 -d
-  chmod 777 $TMPDIR$1
-  tmux -S $TMPDIR$1 attach -t $1
+  tmux -S /tmp/$1 new-session -s $1 -d
+  chmod 777 /tmp/$1
+  tmux -S /tmp/$1 attach -t $1
 }
 
 tmux-join() {
-  tmux -S $TMPDIR$1 new-session -t $1
+  tmux -S /tmp/$1 new-session -t $1
 }
 
 tmux-list() {
@@ -102,7 +102,7 @@ tmux-list() {
 }
 
 tmux-watch() {
-  tmux -S $TMPDIR$1 attach -t $1 -r
+  tmux -S /tmp/$1 attach -t $1 -r
 }
 
 setopt prompt_subst
