@@ -10,8 +10,6 @@ Plugin 'gmarik/Vundle.vim'      " let Vundle manage Vundle, required
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'puppetlabs/puppet-syntax-vim'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'wincent/command-t'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
@@ -19,6 +17,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
 Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()               " All plugins must be added before this line
 filetype plugin indent on       " load file type plugins + indentation
@@ -76,11 +75,10 @@ map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
 
-" Requires ruby support in vim
-" CommandT
-map <silent> <leader>ff :CommandT<CR>
-map <silent> <leader>fb :CommandTBuffer<CR>
+" CtrlP
+map <silent> <leader>ff :CtrlP<CR>
 map <silent> <leader>fr :CommandTFlush<CR>
+map <silent> <leader>be :CtrlPBuffer<CR>
 
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
