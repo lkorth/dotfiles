@@ -18,6 +18,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()               " All plugins must be added before this line
 filetype plugin indent on       " load file type plugins + indentation
@@ -99,3 +100,8 @@ let g:vim_markdown_folding_disabled=1
 " vim-colors-solarized
 set background=dark
 colorscheme solarized
+
+" syntastic
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'mode': 'passive' }
+inoremap <ESC> <ESC> :w<CR>:SyntasticCheck<CR>
