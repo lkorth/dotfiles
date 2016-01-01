@@ -66,7 +66,6 @@ set number                      " display line numbers on the left
 
 "" Shortcuts
 map <silent> <LocalLeader>nh :nohls<CR>
-inoremap <ESC> <ESC> :w<CR>
 noremap <UP> <NOP>
 noremap <DOWN> <NOP>
 noremap <LEFT> <NOP>
