@@ -66,6 +66,7 @@ set number                      " display line numbers on the left
 
 "" Shortcuts
 map <silent> <LocalLeader>nh :nohls<CR>
+inoremap <ESC> <ESC> :w<CR>
 
 "" ====== Plugin Config ======
 
@@ -100,6 +101,5 @@ set background=dark
 colorscheme solarized
 
 " syntastic
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'mode': 'passive' }
-inoremap <ESC> <ESC> :w<CR>:SyntasticCheck<CR>
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
