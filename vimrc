@@ -14,7 +14,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'wincent/command-t'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-fugitive'
-Plugin 'nanotech/jellybeans.vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
@@ -63,7 +63,6 @@ set smartcase                   " ... unless they contain at least one capital l
 
 "" Display
 set number                      " display line numbers on the left
-colorscheme jellybeans
 
 "" Shortcuts
 map <silent> <LocalLeader>nh :nohls<CR>
@@ -96,3 +95,7 @@ nnoremap <silent> <Leader>gw :GitGrepWord<CR>
 
 " vim-markdown
 let g:vim_markdown_folding_disabled=1
+
+" vim-colors-solarized
+set background=dark
+colorscheme solarized
