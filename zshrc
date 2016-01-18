@@ -137,6 +137,7 @@ alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-u
 alias attach='tmux-start lkorth'
 alias format-json='python -mjson.tool'
 alias bi='bundle install'
+alias nginx-logs='goaccess -a -p ~/.goaccessrc -f /var/log/nginx/access.log'
 
 ## servers
 alias home="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@home.ofkorth.net"

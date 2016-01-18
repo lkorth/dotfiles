@@ -2,6 +2,7 @@
 
 # symlink dotfiles
 ln -s $(pwd)/tmux.conf ~/.tmux.conf
+ln -s $(pwd)/goaccessrc ~/.goaccessrc
 ln -s $(pwd)/zshrc ~/.zshrc
 ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/gitconfig ~/.gitconfig
