@@ -55,6 +55,10 @@ autocmd FileAppendPre   * :call TrimWhiteSpace()
 autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
 
+" Visual indent keeps block
+vnoremap > >gv
+vnoremap < <gv
+
 "" Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
@@ -77,7 +81,6 @@ noremap <RIGHT> <NOP>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-
 
 " CtrlP
 map <silent> <leader>ff :CtrlP<CR>
