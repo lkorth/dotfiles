@@ -116,6 +116,7 @@ setopt hist_reduce_blanks   # trim blanks
 setopt hist_verify          # show before executing history commands
 setopt inc_append_history   # add commands as they are typed, don't wait until shell exit
 setopt share_history        # share hist between sessions
+unsetopt nomatch            # Allow [ or ] where ever you want
 
 export LOCALE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
