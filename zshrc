@@ -150,6 +150,6 @@ alias server="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@ofkorth.net"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-if ! [ -n "$TMUX" ]; then
-  tmux-start $(( ( RANDOM % 50 )  + 1 ))
+if ! [ -n "$TMUX" ] && ( [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ] ); then
+  attach
 fi
