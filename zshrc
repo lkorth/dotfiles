@@ -18,25 +18,25 @@ timeout() {
 }
 
 git_untracked_count() {
-  count=`echo $(timeout git ls-files --other --exclude-standard | wc -l)`
+  count=`echo $(timeout $(whence -p git) ls-files --other --exclude-standard | wc -l)`
   if [ $count -eq 0 ]; then return; fi
   echo " %{$fg_bold[yellow]%}?%{$fg_no_bold[black]%}:%{$reset_color$fg[yellow]%}$count%{$reset_color%}"
 }
 
 git_modified_count() {
-  count=`echo $(timeout git ls-files -md | wc -l)`
+  count=`echo $(timeout $(whence -p git) ls-files -md | wc -l)`
   if [ $count -eq 0 ]; then return; fi
   echo " %{$fg_bold[red]%}M%{$fg_no_bold[black]%}:%{$reset_color$fg[red]%}$count%{$reset_color%}"
 }
 
 git_staged_count() {
-  count=`echo $(timeout git diff-index --cached --name-only HEAD 2>/dev/null | wc -l)`
+  count=`echo $(timeout $(whence -p git) diff-index --cached --name-only HEAD 2>/dev/null | wc -l)`
   if [ $count -eq 0 ]; then return; fi
   echo " %{$fg_bold[green]%}S%{$fg_no_bold[black]%}:%{$reset_color$fg[green]%}$count%{$reset_color%}"
 }
 
 git_branch() {
-  branch=$(git symbolic-ref HEAD --quiet 2> /dev/null)
+  branch=$($(whence -p git) symbolic-ref HEAD --quiet 2> /dev/null)
   if [ -z $branch ]; then
     echo "%{$fg[yellow]%}$(git rev-parse --short HEAD)%{$reset_color%}"
   else
@@ -45,12 +45,12 @@ git_branch() {
 }
 
 git_remote_difference() {
-  branch=$(git symbolic-ref HEAD --quiet)
+  branch=$($(whence -p git) symbolic-ref HEAD --quiet)
   if [ -z $branch ]; then return; fi
 
-  remote=$(git remote show)
-  ahead_by=`echo $(git log --oneline $remote/${branch#refs/heads/}..HEAD 2> /dev/null | wc -l)`
-  behind_by=`echo $(git log --oneline HEAD..$remote/${branch#refs/heads/} 2> /dev/null | wc -l)`
+  remote=$($(whence -p git) remote show)
+  ahead_by=`echo $($(whence -p git) log --oneline $remote/${branch#refs/heads/}..HEAD 2> /dev/null | wc -l)`
+  behind_by=`echo $($(whence -p git) log --oneline HEAD..$remote/${branch#refs/heads/} 2> /dev/null | wc -l)`
 
   output=""
   if [ $ahead_by -gt 0 ]; then output="$output%{$fg_bold[white]%}↑%{$reset_color%}$ahead_by"; fi
@@ -60,7 +60,7 @@ git_remote_difference() {
 }
 
 git_user() {
-  user=$(git config user.name)
+  user=$($(whence -p git) config user.name)
   if [ -z $user ]; then
     echo "%{$fg_bold[red]%}no user%{$fg[black]%}@%{$reset_color%}"
   else
@@ -72,7 +72,7 @@ in_git_repo() {
   if [[ -d .git ]]; then
     echo 0
   else
-    echo $(git rev-parse --git-dir > /dev/null 2>&1; echo $?)
+    echo $($(whence -p git) rev-parse --git-dir > /dev/null 2>&1; echo $?)
   fi
 }
 
@@ -82,9 +82,19 @@ git_prompt_info() {
 }
 
 simple_git_prompt_info() {
-  ref=$($(which git) symbolic-ref HEAD 2> /dev/null) || return
-  user=$($(which git) config user.name 2> /dev/null)
+  ref=$($(whence -p git) symbolic-ref HEAD 2> /dev/null) || return
+  user=$($(whence -p git) config user.name 2> /dev/null)
   echo " (${user}@${ref#refs/heads/})"
+}
+
+custom_git () {
+  cmd=$1
+  shift
+  extra=""
+  if [ "$cmd" == "commit" ]; then
+    extra="-v"
+  fi
+  $(whence -p git) $cmd $extra $@
 }
 
 tmux-start() {
@@ -139,6 +149,7 @@ alias attach='tmux-start lkorth'
 alias format-json='python -mjson.tool'
 alias bi='bundle install'
 alias nginx-logs='goaccess -a -p ~/.goaccessrc -f /var/log/nginx/access.log'
+alias git='custom_git'
 
 ## servers
 alias home="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@home.ofkorth.net"
