@@ -155,6 +155,7 @@ alias git='custom_git'
 ## servers
 alias home="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@home.ofkorth.net"
 alias server="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@ofkorth.net"
+alias vpn="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@vpn.ofkorth.net"
 
 [[ -s ~/.zshrc_custom ]] && source ~/.zshrc_custom
 
