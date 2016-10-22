@@ -162,10 +162,6 @@ PATH=$PATH:$HOME/.bin
 
 [[ -s ~/.zshrc_custom ]] && source ~/.zshrc_custom
 
-# rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 if ! [ -n "$TMUX" ] && ( [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ] ); then
   attach
 fi
