@@ -103,6 +103,7 @@ nnoremap <silent> <Leader>gw :GitGrepWord<CR>
 " vim-markdown
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_frontmatter=1
+let g:vim_markdown_fenced_languages=['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'android=java']
 
 " vim-colors-solarized
 set background=dark
