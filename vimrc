@@ -83,6 +83,7 @@ noremap <RIGHT> <NOP>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+let NERDTreeIgnore = ['\.pyc$']
 
 " CtrlP
 map <silent> <leader>ff :CtrlP<CR>
