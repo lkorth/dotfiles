@@ -26,7 +26,6 @@ filetype plugin indent on       " load file type plugins + indentation
 "" Options
 syntax enable
 set encoding=utf-8
-set clipboard=unnamed                                    " system clipboard integration
 set showcmd                                              " display incomplete commands
 set nojoinspaces                                         " don't add an extra space after a period
 set hidden                                               " allow any buffer to be hidden without writing
