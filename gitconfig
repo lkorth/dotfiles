@@ -1,6 +1,7 @@
 [user]
   name = lkorth
   email = luke@lukekorth.com
+  signingkey = 022B1658
 [color]
   ui = auto
 [alias]

@@ -93,6 +93,8 @@ custom_git () {
   extra=""
   if [ "$cmd" == "commit" ]; then
     extra="-v"
+  elif [ "$cmd" == "tag" ]; then
+    extra="-s"
   fi
   $(whence -p git) $cmd $extra $@
 }
