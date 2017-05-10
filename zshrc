@@ -91,10 +91,12 @@ custom_git () {
   cmd=$1
   shift
   extra=""
-  if [ "$cmd" == "commit" ]; then
+  if [[ $cmd = "commit" ]]; then
     extra="-v"
-  elif [ "$cmd" == "tag" ]; then
-    extra="-s"
+  elif [[ $cmd = "tag" ]]; then
+    if [[ -n $@ && $@ != "-l" ]]; then
+      extra="-s"
+    fi
   fi
   $(whence -p git) $cmd $extra $@
 }
