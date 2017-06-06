@@ -158,11 +158,6 @@ alias nginx-logs='goaccess -a -p ~/.goaccessrc -f /var/log/nginx/access.log'
 alias git='custom_git'
 alias android-screen-shot="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > screen.png"
 
-# servers
-alias home="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@home.ofkorth.net"
-alias server="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@ofkorth.net"
-alias vpn="ssh -p 22022 -i ~/.ssh/rsa_luke_lukekorth_com luke@vpn.ofkorth.net"
-
 PATH=$PATH:$HOME/.bin
 
 [[ -s ~/.zshrc_custom ]] && source ~/.zshrc_custom
