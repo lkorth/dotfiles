@@ -150,6 +150,7 @@ stty start undef
 # aliases
 alias ll='ls -lh'
 alias la='ls -lha'
+alias size-of='du -sh'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove'
 alias attach='tmux-start lkorth'
 alias format-json='python -mjson.tool'
