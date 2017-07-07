@@ -48,9 +48,8 @@ git_remote_difference() {
   branch=$($(whence -p git) symbolic-ref HEAD --quiet)
   if [ -z $branch ]; then return; fi
 
-  remote=$($(whence -p git) remote show)
-  ahead_by=`echo $($(whence -p git) log --oneline $remote/${branch#refs/heads/}..HEAD 2> /dev/null | wc -l)`
-  behind_by=`echo $($(whence -p git) log --oneline HEAD..$remote/${branch#refs/heads/} 2> /dev/null | wc -l)`
+  ahead_by=`echo $($(whence -p git) log --oneline origin/${branch#refs/heads/}..HEAD 2> /dev/null | wc -l)`
+  behind_by=`echo $($(whence -p git) log --oneline HEAD..origin/${branch#refs/heads/} 2> /dev/null | wc -l)`
 
   output=""
   if [ $ahead_by -gt 0 ]; then output="$output%{$fg_bold[white]%}↑%{$reset_color%}$ahead_by"; fi
