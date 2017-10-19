@@ -93,7 +93,7 @@ custom_git () {
   if [[ $cmd = "commit" ]]; then
     extra="-v"
   elif [[ $cmd = "tag" ]]; then
-    if [[ -n $@ && $@ != "-l" ]]; then
+    if [[ -n $@ && $@ != "-l" && $@ != "-d" ]]; then
       extra="-s"
     fi
   fi
