@@ -3,15 +3,29 @@
   email = luke@lukekorth.com
   signingkey = 022B1658
 [color]
-  ui = auto
+  ui = true
+[color "diff"]
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [alias]
   co = checkout
   oneline = log --pretty=format:\"%h %ad%x20%s%x20%x28%an%x29\" --date=short -30
   pull = pull --rebase
   staged = diff --cached
   st = status
+  log = log --graph
 [core]
   autocrlf = input
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
   default = current
 [credential]
