@@ -89,6 +89,7 @@ let NERDTreeIgnore = ['\.pyc$']
 map <silent> <leader>ff :CtrlP<CR>
 map <silent> <leader>fr :CommandTFlush<CR>
 map <silent> <leader>be :CtrlPBuffer<CR>
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
