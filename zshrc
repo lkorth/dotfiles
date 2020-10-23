@@ -153,6 +153,7 @@ alias size-of='du -sh'
 alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove'
 alias attach='tmux-start lkorth'
 alias format-json='python -mjson.tool'
+alias format-xml="python -c 'import sys;import xml.dom.minidom;s=sys.stdin.read();print(xml.dom.minidom.parseString(s).toprettyxml())'"
 alias bi='bundle install'
 alias nginx-logs='goaccess -a -p ~/.goaccessrc -f /var/log/nginx/access.log'
 alias git='custom_git'
