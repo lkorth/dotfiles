@@ -110,7 +110,7 @@ let g:vim_markdown_fenced_languages=['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosi
 
 " vim-colors-solarized
 set background=dark
-colorscheme solarized
+silent! colorscheme solarized
 
 " syntastic
 let g:syntastic_check_on_wq = 1
