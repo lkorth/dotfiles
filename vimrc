@@ -77,6 +77,9 @@ noremap <DOWN> <NOP>
 noremap <LEFT> <NOP>
 noremap <RIGHT> <NOP>
 
+" Write file with sudo
+cmap w!! w !sudo tee > /dev/null %
+
 "" ====== Plugin Config ======
 
 " NERDTree
