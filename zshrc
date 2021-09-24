@@ -168,3 +168,5 @@ PATH=$PATH:$HOME/.bin
 if ! [ -n "$TMUX" ] && ( [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ] ); then
   attach
 fi
+
+source $HOME/.bin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
