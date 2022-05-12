@@ -165,7 +165,7 @@ PATH=$PATH:$HOME/.bin
 
 [[ -s ~/.zshrc_custom ]] && source ~/.zshrc_custom
 
-if ! [ -n "$TMUX" ] && ( [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ] ); then
+if ! [ -n "$TMUX" ] ; then
   attach
 fi
 
