@@ -12,7 +12,6 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-fugitive'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
@@ -110,10 +109,6 @@ nnoremap <silent> <Leader>gw :GitGrepWord<CR>
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_frontmatter=1
 let g:vim_markdown_fenced_languages=['c++=cpp', 'viml=vim', 'bash=sh', 'ini=dosini', 'android=java']
-
-" vim-colors-solarized
-set background=dark
-silent! colorscheme solarized
 
 " syntastic
 let g:syntastic_check_on_wq = 1
