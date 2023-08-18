@@ -6,6 +6,7 @@ ln -s $(pwd)/goaccessrc ~/.goaccessrc
 ln -s $(pwd)/zshrc ~/.zshrc
 ln -s $(pwd)/vimrc ~/.vimrc
 ln -s $(pwd)/gitconfig ~/.gitconfig
+ln -s $(pwd)/gitignore ~/.gitignore
 
 # setup .bin directory
 rm -rf ~/.bin

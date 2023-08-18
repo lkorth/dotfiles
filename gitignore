@@ -1,0 +1,6 @@
+# OS specific files
+Thumbs.db
+.DS_Store
+
+# editor specific files
+.obsidian
