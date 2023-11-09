@@ -13,5 +13,12 @@ base64url_decode() {
   echo "$result" | tr '_-' '/+' | base64 -d
 }
 
-base64url_decode $(echo -n $1 | cut -d "." -f 1) | jq .;
-base64url_decode $(echo -n $1 | cut -d "." -f 2) | jq .;
+if [ -z "${1:-}" ]
+then
+  jwt=$(cat)
+else
+  jwt=$1
+fi
+
+base64url_decode $(echo -n $jwt | cut -d "." -f 1) | jq .;
+base64url_decode $(echo -n $jwt | cut -d "." -f 2) | jq .;
