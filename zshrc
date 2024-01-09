@@ -160,6 +160,7 @@ alias git='custom_git'
 alias android-screen-shot="adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > screen.png"
 alias speed-test="curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
 alias search="grep --exclude-dir=.git -Rn . -e $1"
+alias lintjson="jq type 1>/dev/null"
 
 PATH=$PATH:$HOME/.bin
 
