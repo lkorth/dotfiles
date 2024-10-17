@@ -12,7 +12,7 @@ ln -s $(pwd)/gitignore ~/.gitignore
 rm -rf ~/.bin
 mkdir ~/.bin
 cp -r bin/* ~/.bin
-curl https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy --output ~/.bin/diff-so-fancy
+wget -O ~/.bin/diff-so-fancy https://github.com/so-fancy/diff-so-fancy/releases/download/v1.4.4/diff-so-fancy
 chmod +x ~/.bin/diff-so-fancy
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.bin/zsh-syntax-highlighting
 
